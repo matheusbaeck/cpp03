@@ -6,20 +6,26 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/06 11:34:12 by math             ###   ########.fr       */
+/*   Updated: 2024/06/06 12:28:19 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap( std::string name ) : _name(name), _hp(10), _ep(10), _atk(0)
-{
-	std::cout<< "Contructor called!" << std::endl;
-}
-
 ClapTrap::ClapTrap( void ) : _name("Nameless"), _hp(10), _ep(10), _atk(0)
 {
-	std::cout<< "Copy contructor called!" << std::endl;
+	std::cout<< "Copy constructor called!" << std::endl;
+}
+
+ClapTrap::ClapTrap( std::string name ) : _name(name), _hp(10), _ep(10), _atk(0)
+{
+	std::cout<< "Constructor called!" << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &)
+{
+	std::cout << "Copy assignment operator called" << std::endl;
+	return (*this);
 }
 
 ClapTrap::~ClapTrap( void )
@@ -27,13 +33,7 @@ ClapTrap::~ClapTrap( void )
 	std::cout<< "Destructor called!" << std::endl;
 }
 
-// std::ostream	&operator<<(std::ostream &os, ClapTrap const &obj)
-// {
-// 	os << obj._name;
-// 	return (os);
-// }
-
-bool	ClapTrap::isAlive( void )
+bool	ClapTrap::isAlive( void ) const
 {
 	if (this->_hp == static_cast<unsigned int>(0))
 	{
@@ -43,7 +43,7 @@ bool	ClapTrap::isAlive( void )
 	return (true);
 }
 
-bool	ClapTrap::hasEnergy( void )
+bool	ClapTrap::hasEnergy( void ) const
 {
 	if (this->_ep == static_cast<unsigned int>(0))
 	{
