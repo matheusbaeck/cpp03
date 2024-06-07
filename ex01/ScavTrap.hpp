@@ -6,12 +6,12 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:01:44 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 12:55:22 by math             ###   ########.fr       */
+/*   Updated: 2024/06/07 17:57:20 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAVTRAP_H__
-# define CLAVTRAP_H__
+#ifndef SCAVTRAP_H__
+# define SCAVTRAP_H__
 
 # include "ClapTrap.hpp"
 
