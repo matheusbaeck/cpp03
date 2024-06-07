@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 14:03:45 by math             ###   ########.fr       */
+/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ClapTrap::attack(const std::string & target)
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_atk << " points of damage!" << std::endl;
 }
 
-void	ClapTrap::takeDamege(unsigned int amout)
+void	ClapTrap::takeDamage(unsigned int amout)
 {
 	if (!this->isAlive())
 		return ;

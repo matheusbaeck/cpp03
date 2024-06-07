@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/05 18:21:48 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
+/*   Created: 2024/06/05 18:01:44 by math              #+#    #+#             */
+/*   Updated: 2024/06/07 18:13:54 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef FRAGTRAP_H__
+# define FRAGTRAP_H__
 
-int	main( void )
+# include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-	ClapTrap	hero;
+	public:
+		FragTrap( void );
+		FragTrap( std::string name );
+		FragTrap& operator=( FragTrap const &rhc );
+		~FragTrap( void );
+		void	highFivesGuys(void);
+		void	takeDamage( unsigned int amount );
+};
 
-	hero = ClapTrap("Aquiles");
-	hero.attack("Zombie");
-	hero.takeDamage(9);
-	for (size_t i = 0; i < 10; i++)
-	{
-		hero.beRepaired(1);
-	}
-	hero.attack(9999)
-	hero.takeDamage(100);
-	hero.beRepaired(100);
-
-	return (0);
-}
+#endif

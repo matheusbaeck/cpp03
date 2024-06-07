@@ -11,8 +11,28 @@
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-static int	attack(ScavTrap &agressor, ScavTrap &target)
+static int	attack(ScavTrap &agressor, FragTrap &target)
+{
+	if (!agressor.isAlive())
+		return (0);
+	if (!agressor.hasEnergy())
+	{
+		std::cout << "-> Attack failure, " << agressor.getName() << " has no energy left" << std::endl;
+		return (0);
+	}
+	if (!target.isAlive())
+	{
+		std::cout << "-> Attack failure, " << target.getName() << " is already dead" << std::endl;
+		return (0);
+	}
+	agressor.attack(target.getName());
+	target.takeDamage(agressor.getAtk());
+	return (1);
+}
+
+static int	attack(FragTrap &agressor, ScavTrap &target)
 {
 	if (!agressor.isAlive())
 		return (0);
@@ -78,11 +98,12 @@ int	main( void )
 	std::string		enemy_name = "Zazz";
 	unsigned int	enemy_heal = 7;
 
-	ScavTrap	hero(hero_name);
+	ScavTrap	hero;
+	hero = ScavTrap(hero_name);
 	std::cout << std::endl;
 	
-	ScavTrap	enemy;
-	enemy = ScavTrap(enemy_name);
+	FragTrap	enemy;
+	enemy = FragTrap(enemy_name);
 	std::cout << std::endl;
 
 	ClapTrap	enemy2;

@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:01:44 by math              #+#    #+#             */
-/*   Updated: 2024/06/06 12:27:07 by math             ###   ########.fr       */
+/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class ClapTrap
 		ClapTrap& operator=( ClapTrap const &rhc );
 		~ClapTrap( void );
 		void			attack( const std::string & target );
-		void			takeDamege( unsigned int amout );
+		void			takeDamage( unsigned int amout );
 		void			beRepaired( unsigned int amout );
 		/* Non Mandatory */
 		bool			isAlive( void ) const;
