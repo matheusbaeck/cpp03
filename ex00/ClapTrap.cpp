@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/06 12:28:19 by math             ###   ########.fr       */
+/*   Updated: 2024/06/07 14:03:45 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	ClapTrap::takeDamege(unsigned int amout)
 		this->_hp -= amout;
 	else
 		this->_hp = 0;
-	std::cout << "ClapTrap " << this->_name << " recived " << amout << " points of damage!" << std::endl;
+	std::cout << "ClapTrap " << this->_name << " received " << amout << " points of damage!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amout)

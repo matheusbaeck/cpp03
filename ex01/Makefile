@@ -6,7 +6,7 @@
 #    By: math <math@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 18:22:45 by math42            #+#    #+#              #
-#    Updated: 2024/06/06 13:15:58 by math             ###   ########.fr        #
+#    Updated: 2024/06/06 13:16:08 by math             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		= ex
 SRCSDIR		= .
 INCLUDES	= .
 
-SRCS		= main.cpp ClapTrap.cpp
+SRCS		= main.cpp ClapTrap.cpp ClapTrap.cpp  ScavTrap.cpp
 
 # Compiler options
 CC			= clang++
