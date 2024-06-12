@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 11:29:16 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ ScavTrap::~ScavTrap( void )
 void	ScavTrap::takeDamage( unsigned int amount )
 {
 	unsigned int ep;
+
+	std::cout << "SCAV OWN METHOD" << std::endl;
 
 	ep = this->getEp();
 	if (!this->_guard)

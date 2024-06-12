@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/11 18:33:52 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 12:04:14 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,7 +114,7 @@ void	ClapTrap::attack(const std::string & target)
 	}
 	this->_ep--;
 	std::cout << "-> " << this->_name << " attacks " << target << ", causing " << this->_atk << " points of damage!" << std::endl;
-	std::cout << "-> " << this->_name << " has " << this->_ep << " energy points left." << std::endl;
+	//std::cout << "-> " << this->_name << " has " << this->_ep << " energy points left." << std::endl;
 }
 
 void	ClapTrap::takeDamage(unsigned int amout)
@@ -126,7 +126,7 @@ void	ClapTrap::takeDamage(unsigned int amout)
 	else
 		this->_hp = 0;
 	std::cout << "-> " << this->_name << " received " << amout << " points of damage!" << std::endl;
-	std::cout << "-> " << this->_name << " has " << this->_hp << " life points left." << std::endl;
+	//std::cout << "-> " << this->_name << " has " << this->_hp << " life points left." << std::endl;
 
 }
 
@@ -142,11 +142,11 @@ void	ClapTrap::beRepaired(unsigned int amout)
 	this->_hp += amout;
 	this->_ep--;
 	std::cout << "-> " << this->_name << " repaired " << amout << " points of Life!" << std::endl;
-	std::cout << "-> " << this->_name << " has " << this->_hp << " life points left and " << this->_ep << " energy points left." << std::endl;
+	//std::cout << "-> " << this->_name << " has " << this->_hp << " life points left and " << this->_ep << " energy points left." << std::endl;
 }
 
 std::ostream	&operator<<(std::ostream &os, ClapTrap const &obj)
 {
-	os << obj.getName() << " " << obj.getHp() << "/" << obj.getEp();
+	os << obj.getName() << ":" << obj.getAtk() << " " << obj.getHp() << "/" << obj.getEp();
 	return (os);
 }

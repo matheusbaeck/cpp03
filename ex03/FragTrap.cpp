@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:38:12 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 11:45:26 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ void	FragTrap::takeDamage( unsigned int amount )
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "->" << " WELL DONE BROTHER, " << this->getName() << "requests a high five! ✋" << std::endl;
+	std::cout << "->" << " WELL DONE BROTHER, " << this->getName() << " requests a high five! ✋" << std::endl;
 }

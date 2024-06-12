@@ -6,49 +6,11 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:21:48 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 11:32:55 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
-static int	attack(ScavTrap &agressor, ScavTrap &target)
-{
-	if (!agressor.isAlive())
-		return (0);
-	if (!agressor.hasEnergy())
-	{
-		std::cout << "-> Attack failure, " << agressor.getName() << " has no energy left" << std::endl;
-		return (0);
-	}
-	if (!target.isAlive())
-	{
-		std::cout << "-> Attack failure, " << target.getName() << " is already dead" << std::endl;
-		return (0);
-	}
-	agressor.attack(target.getName());
-	target.takeDamage(agressor.getAtk());
-	return (1);
-}
-
-static int	attack(ScavTrap &agressor, ClapTrap &target)
-{
-	if (!agressor.isAlive())
-		return (0);
-	if (!agressor.hasEnergy())
-	{
-		std::cout << "-> Attack failure, " << agressor.getName() << " has no energy left" << std::endl;
-		return (0);
-	}
-	if (!target.isAlive())
-	{
-		std::cout << "-> Attack failure, " << target.getName() << " is already dead" << std::endl;
-		return (0);
-	}
-	agressor.attack(target.getName());
-	target.takeDamage(agressor.getAtk());
-	return (1);
-}
 
 static int	attack(ClapTrap &agressor, ClapTrap &target)
 {
@@ -69,7 +31,24 @@ static int	attack(ClapTrap &agressor, ClapTrap &target)
 	return (1);
 }
 
-
+static int	attack(ClapTrap &agressor, ScavTrap &target)
+{
+	if (!agressor.isAlive())
+		return (0);
+	if (!agressor.hasEnergy())
+	{
+		std::cout << "-> Attack failure, " << agressor.getName() << " has no energy left" << std::endl;
+		return (0);
+	}
+	if (!target.isAlive())
+	{
+		std::cout << "-> Attack failure, " << target.getName() << " is already dead" << std::endl;
+		return (0);
+	}
+	agressor.attack(target.getName());
+	target.takeDamage(agressor.getAtk());
+	return (1);
+}
 
 int	main( void )
 {

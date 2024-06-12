@@ -6,7 +6,7 @@
 #    By: math <math@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/04 18:22:45 by math42            #+#    #+#              #
-#    Updated: 2024/06/07 18:49:36 by math             ###   ########.fr        #
+#    Updated: 2024/06/12 12:17:15 by math             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS		= main.cpp ClapTrap.cpp ClapTrap.cpp  ScavTrap.cpp FragTrap.cpp DimondTrap
 
 # Compiler options
 CC			= clang++
-CFLAGS		= -Wall -Wextra -Werror -std=c++98
+CFLAGS		= -Wall -Wextra -Werror -Wshadow -std=c++98
 
 all: $(NAME)
 

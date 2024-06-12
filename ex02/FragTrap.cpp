@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:15:43 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 11:45:37 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ FragTrap::~FragTrap( void )
 
 void	FragTrap::takeDamage( unsigned int amount )
 {
-	if (amount > this->getHp())
+	if (amount >= this->getHp())
 		this->highFivesGuys();
 	this->ClapTrap::takeDamage(amount);
 }
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "->" << " WELL DONE BROTHER, " << this->getName() << "requests a high five! ✋" << std::endl;
+	std::cout << "->" << " WELL DONE BROTHER, " << this->getName() << " requests a high five! ✋" << std::endl;
 }

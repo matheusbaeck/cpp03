@@ -6,14 +6,14 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:37:12 by math              #+#    #+#             */
-/*   Updated: 2024/06/11 18:50:23 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 10:41:37 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "DimondTrap.hpp"
 
-DimondTrap::DimondTrap( void ) : _name("_clap_name")
+DimondTrap::DimondTrap( void ) : _name("DiamondTrap")
 {
 	this->ScavTrap::setHp (100);
 	this->ScavTrap::setEp(50);
@@ -21,7 +21,7 @@ DimondTrap::DimondTrap( void ) : _name("_clap_name")
 	std::cout<< "\tDimond " << this->ScavTrap::getName() <<" cpy constructor called!" << std::endl;
 }
 
-DimondTrap::DimondTrap( std::string name ) : _name("_clap_name")
+DimondTrap::DimondTrap( std::string name ) : _name("DiamondTrap")
 {
 	this->ScavTrap::setName(name);
 	this->ScavTrap::setHp (100);
@@ -34,7 +34,7 @@ DimondTrap &DimondTrap::operator=(DimondTrap const &rhc )
 {
 	if (this == &rhc)
 		return (*this);
-	this->_name = "_clap_name";
+	this->_name = "DiamondTrap";
 	this->ScavTrap::setName(rhc.ScavTrap::getName());
 	this->ScavTrap::setHp(rhc.ScavTrap::getHp());
 	this->ScavTrap::setEp(rhc.ScavTrap::getEp());
@@ -57,12 +57,12 @@ void	DimondTrap::takeDamage( unsigned int amount )
 
 void	DimondTrap::whoAmI( void )
 {
-	std::cout << this->getName() <<std::endl;
+	std::cout << "-> I AM... THE DIMOND... I AM " << this->getName() <<std::endl;
 }
 
 std::string		DimondTrap::getName( void ) const
 {
-	return (this->ClapTrap::getName() + this->_name);
+	return (this->_name + "_" + this->ClapTrap::getName());
 }
 
 std::ostream	&operator<<(std::ostream &os, DimondTrap const &obj)

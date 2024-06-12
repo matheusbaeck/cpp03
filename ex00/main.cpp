@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:21:48 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
+/*   Updated: 2024/06/07 19:12:50 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main( void )
 	{
 		hero.beRepaired(1);
 	}
-	hero.attack(9999)
+	hero.attack("Zombie");
 	hero.takeDamage(100);
 	hero.beRepaired(100);
 

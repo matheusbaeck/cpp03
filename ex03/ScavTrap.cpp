@@ -6,7 +6,7 @@
 /*   By: math <math@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 18:46:50 by math              #+#    #+#             */
-/*   Updated: 2024/06/07 18:10:39 by math             ###   ########.fr       */
+/*   Updated: 2024/06/12 12:12:00 by math             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,14 @@ void	ScavTrap::takeDamage( unsigned int amount )
 
 	ep = this->getEp();
 	if (!this->_guard)
+	{
 		this->ClapTrap::takeDamage(amount);
+	}
 	else if (ep >= 2)
 	{
 		this->setEp(ep - 1);
 		std::cout << "-> "<< this->getName() << " blocked " << (amount - (amount /2)) << " points of damage on Gate keeper mode!" << std::endl;
-		std::cout << "-> " << this->getName() << " has " << this->getEp() << " energy points left." << std::endl;
+		//std::cout << "-> " << this->getName() << " has " << this->getEp() << " energy points left." << std::endl;
 		this->ClapTrap::takeDamage(amount / 2);
 	}
 	else
