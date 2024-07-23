@@ -18,7 +18,7 @@ DimondTrap::DimondTrap( void ) : _name("DiamondTrap")
 	this->ScavTrap::setHp (100);
 	this->ScavTrap::setEp(50);
 	this->ScavTrap::setAtk(30);
-	std::cout<< "\tDimond " << this->ScavTrap::getName() <<" cpy constructor called!" << std::endl;
+	std::cout<< "\tDimond " << this->ScavTrap::getName() <<" std constructor called!" << std::endl;
 }
 
 DimondTrap::DimondTrap( std::string name ) : _name("DiamondTrap")
@@ -28,6 +28,12 @@ DimondTrap::DimondTrap( std::string name ) : _name("DiamondTrap")
 	this->ScavTrap::setEp(50);
 	this->ScavTrap::setAtk(30);
 	std::cout<< "\tDimond " << this->ScavTrap::getName() <<" constructor called!" << std::endl;
+}
+
+DimondTrap::DimondTrap( DimondTrap const &other ) :ClapTrap(), ScavTrap(), FragTrap()
+{
+	*this = other;
+	std::cout<< "\tDimond " << this->ScavTrap::getName() <<" cpy constructor called!" << std::endl;
 }
 
 DimondTrap &DimondTrap::operator=(DimondTrap const &rhc )

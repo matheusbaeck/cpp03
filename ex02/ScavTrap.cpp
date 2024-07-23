@@ -18,7 +18,7 @@ ScavTrap::ScavTrap( void )
 	this->setEp(50);
 	this->setAtk(20);
 	this->_guard = false;
-	std::cout<< "\tScav " << this->getName() <<" cpy constructor called!" << std::endl;
+	std::cout<< "\tScav " << this->getName() <<" std constructor called!" << std::endl;
 }
 
 ScavTrap::ScavTrap( std::string name )
@@ -29,6 +29,12 @@ ScavTrap::ScavTrap( std::string name )
 	this->setAtk(20);
 	this->_guard = false;
 	std::cout<< "\tScav " << this->getName() <<" constructor called!" << std::endl;
+}
+
+ScavTrap::ScavTrap( ScavTrap const &other ) : ClapTrap()
+{
+	std::cout<< "\tScav" << this->getName() << " cpy constructor called!" << std::endl;
+	*this = other;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &rhc )

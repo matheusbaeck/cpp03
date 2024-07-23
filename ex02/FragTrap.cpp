@@ -17,7 +17,7 @@ FragTrap::FragTrap( void )
 	this->setHp (100);
 	this->setEp(100);
 	this->setAtk(30);
-	std::cout<< "\tFrag " << this->getName() <<" cpy constructor called!" << std::endl;
+	std::cout<< "\tFrag " << this->getName() <<" std constructor called!" << std::endl;
 }
 
 FragTrap::FragTrap( std::string name )
@@ -27,6 +27,12 @@ FragTrap::FragTrap( std::string name )
 	this->setEp(100);
 	this->setAtk(30);
 	std::cout<< "\tFrag " << this->getName() <<" constructor called!" << std::endl;
+}
+
+FragTrap::FragTrap( FragTrap const &other) : ClapTrap()
+{
+	std::cout<< "\tFrag " << this->getName() <<" cpy constructor called!" << std::endl;
+	*this = other;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &rhc )

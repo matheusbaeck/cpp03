@@ -31,6 +31,7 @@ class ClapTrap
 	public:
 		ClapTrap( void );
 		ClapTrap( std::string name );
+		ClapTrap( ClapTrap const & );
 		ClapTrap& operator=( ClapTrap const &rhc );
 		~ClapTrap( void );
 		void			attack( const std::string & target );

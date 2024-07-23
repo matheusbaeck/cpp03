@@ -22,9 +22,22 @@ ClapTrap::ClapTrap( std::string name ) : _name(name), _hp(10), _ep(10), _atk(0)
 	std::cout<< "Constructor called!" << std::endl;
 }
 
-ClapTrap &ClapTrap::operator=(ClapTrap const &)
+ClapTrap::ClapTrap( ClapTrap const &other)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = other;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &other)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
+	if (this != &other)
+	{
+		this->_name = other._name;
+		this->_hp = other._hp;
+		this->_ep = other._ep;
+		this->_atk = other._atk;
+	}
 	return (*this);
 }
 

@@ -17,6 +17,8 @@ int	main( void )
 	ClapTrap	hero;
 
 	hero = ClapTrap("Aquiles");
+
+	ClapTrap    herotest(hero);
 	hero.attack("Zombie");
 	hero.takeDamage(9);
 	for (size_t i = 0; i < 10; i++)
@@ -26,6 +28,7 @@ int	main( void )
 	hero.attack("Zombie");
 	hero.takeDamage(100);
 	hero.beRepaired(100);
+	herotest.attack("Zombie");
 
 	return (0);
 }

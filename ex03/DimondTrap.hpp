@@ -23,6 +23,7 @@ class DimondTrap : public ScavTrap, public FragTrap
 	public:
 		DimondTrap( void );
 		DimondTrap( std::string name );
+		DimondTrap( DimondTrap const & );
 		DimondTrap& operator=( DimondTrap const &rhc );
 		~DimondTrap( void );
 		void			takeDamage( unsigned int amount );

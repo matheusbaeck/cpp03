@@ -14,12 +14,18 @@
 
 ClapTrap::ClapTrap( void ) : _name("Nameless"), _hp(10), _ep(10), _atk(0)
 {
-	std::cout<< "Clap " << this->_name << " copy constructor called!" << std::endl;
+	std::cout<< "Clap " << this->_name << " std constructor called!" << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ) : _name(name), _hp(10), _ep(10), _atk(0)
 {
 	std::cout<< "Clap " << this->_name << " constructor called!" << std::endl;
+}
+
+ClapTrap::ClapTrap( ClapTrap const &other)
+{
+	std::cout<< "Clap " << this->_name << " cpy constructor called!" << std::endl;
+	*this = other;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &rhc )

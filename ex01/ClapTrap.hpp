@@ -19,7 +19,7 @@
 class ClapTrap
 {
 	private:
-		std::string		_name;
+		std::string	_name;
 		unsigned int	_hp;
 		unsigned int	_ep;
 		unsigned int	_atk;
@@ -31,11 +31,12 @@ class ClapTrap
 	public:
 		ClapTrap( void );
 		ClapTrap( std::string name );
-		ClapTrap& operator=( ClapTrap const &rhc );
+		ClapTrap( ClapTrap const &);
+		ClapTrap& operator=( ClapTrap const & );
 		~ClapTrap( void );
-		void			attack( const std::string & target );
-		void			takeDamage( unsigned int amout );
-		void			beRepaired( unsigned int amout );
+		void			attack( const std::string & );
+		void			takeDamage( unsigned int );
+		void			beRepaired( unsigned int );
 		/* Non Mandatory */
 		bool			isAlive( void ) const;
 		bool			hasEnergy( void ) const;
